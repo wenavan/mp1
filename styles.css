@@ -67,7 +67,7 @@ table {
   padding-right: 10px;
 }
 #logo {
-  width: 70px;
+  width: 80px;
 }
 .navbar-toggler-icon {
   display: flex;
@@ -80,10 +80,10 @@ table {
   background-size: 100%;
 }
 .logo {
-  position: relative;
   font-family: "Source Sans Pro", sans-serif;
   font-style: oblique;
   font-weight: bold;
+  padding: auto;
 }
 nav {
   background: rgb(25, 106, 16);
