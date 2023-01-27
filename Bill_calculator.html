@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/dc2922df3c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+
+    <title>Home</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <!-- Nav bar heading-->
+
+    <div class="header">
+      <a href="#" class="iconhead" id="iconhead"
+        ><i class="fa-brands fa-facebook-f"></i
+      ></a>
+      <a href="#" class="iconhead"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container" id="bar">
+        <a class="navbar-brand" href="index.html"
+          ><img src="img/logo2.png" id="logo"
+        /></a>
+        <h1 class="logo" style="color: white">AVECO</h1>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <form id="app" action="#">
+              <label :data-state="state" for="search">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  @click="state = 'opan'"
+                  @blur="state='close'"
+                />
+                <i class="fa fa-search" @click="" aria-hidden="true"></i>
+              </label>
+            </form>
+            <div id="bcl">
+              <a
+                style="font-size: 8pt; text-decoration: none"
+                href="http://www.devanswer.com"
+              ></a>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="About_Us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Applying for a new connection</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Monthly Rate Schedule</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Generation Rates</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Payement Centers</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Bill_calculator.html"
+                    >Estimating your Bill</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="services.html"
+                    >Electrical Safety Tips</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact_Us.html">Contact Us</a>
+            </li>
+            <li class="nav-item pt-2 ps-2">
+              <a href="Log_in.html"
+                ><i class="fa-solid fa-user-plus" style="color: white"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bill Calculator-->
+
+    <div class="container pt-5 pb-5 d-flex justify-content-center">
+      <div id="wrapper">
+        <div id="lcol">
+          <div id="doc">
+            <h1>Energy cost calculator</h1>
+            <form name="calcform" autocomplete="off" id="form">
+              <table class="calc2">
+                <tr>
+                  <td>Select country:</td>
+                  <td>
+                    <select
+                      name="Select1"
+                      onchange="OnCountryChange()"
+                      autofocus
+                    >
+                      <option>Australia</option>
+                      <option>Canada</option>
+                      <option>France</option>
+                      <option>Germany</option>
+                      <option>India</option>
+                      <option>Phillipine</option>
+                      <option>Singapore</option>
+                      <option>United Kingdom</option>
+                      <option selected="selected">United States</option>
+                      <option>Other country</option>
+                    </select>
+                  </td>
+                  <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td>Typical appliance:</td>
+                  <td colspan="2">
+                    <select name="Select4" onchange="OnSetPower()">
+                      <option>-- select --</option>
+                      <option>Air conditioner</option>
+                      <option>Clothes dryer</option>
+                      <option>Clothes iron</option>
+                      <option>Dishwasher</option>
+                      <option>Electric kettle</option>
+                      <option>Fan</option>
+                      <option>Heater</option>
+                      <option>Microwave oven</option>
+                      <option>Desktop computer</option>
+                      <option>Laptop computer</option>
+                      <option>Refrigerator</option>
+                      <option>Stereo receiver</option>
+                      <option>Television</option>
+                      <option>Toaster oven</option>
+                      <option>Vacuum cleaner</option>
+                      <option>Washing machine</option>
+                      <option>Water heater</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Power consumption:</td>
+                  <td class="math">
+                    <input
+                      name="Text1"
+                      type="number"
+                      step="any"
+                      min="0"
+                      class="intext"
+                      style="width: 120px"
+                      onblur="OnEnergyCalc()"
+                    />
+                  </td>
+                  <td>
+                    <select name="Select2" onchange="OnEnergyCalc()">
+                      <option selected="selected">watts (W)</option>
+                      <option>kilowatts (kW)</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Hours of use per day:</td>
+                  <td class="math">
+                    <input
+                      name="Text2"
+                      type="number"
+                      step="any"
+                      min="0"
+                      max="24"
+                      class="intext"
+                      style="width: 120px"
+                      onblur="OnEnergyCalc()"
+                    />
+                  </td>
+                  <td class="mathsymbol">h/day</td>
+                </tr>
+                <tr>
+                  <td>Energy consumed per day:</td>
+                  <td class="math">
+                    <input
+                      name="Text8"
+                      type="number"
+                      step="any"
+                      min="0"
+                      class="intext"
+                      style="width: 120px"
+                    />
+                  </td>
+                  <td class="mathsymbol">kWh/day</td>
+                </tr>
+                <tr>
+                  <td>1 kilowatt-hour (kWh) cost:</td>
+                  <td class="math">
+                    <input
+                      name="Text3"
+                      type="number"
+                      step="any"
+                      min="0"
+                      class="intext"
+                      value="12"
+                      style="width: 120px"
+                    />
+                  </td>
+                  <td>
+                    <select name="Select3">
+                      <option selected="selected">cent</option>
+                      <option>pence</option>
+                      <option>rupee</option>
+                      <option>peso</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td colspan="2">
+                    <input
+                      onclick="OnCalcCost()"
+                      type="button"
+                      value="Calculate"
+                      class="btn"
+                    />
+                    <input
+                      onclick="OnReset()"
+                      type="reset"
+                      value="Reset"
+                      class="btn"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Energy cost per day:</td>
+                  <td class="math">
+                    <input
+                      name="Text5"
+                      type="text"
+                      class="outtext"
+                      style="width: 120px"
+                      readonly="readonly"
+                    />
+                  </td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>Energy cost per month:</td>
+                  <td class="math">
+                    <input
+                      name="Text6"
+                      type="text"
+                      class="outtext"
+                      style="width: 120px"
+                      readonly="readonly"
+                    />
+                  </td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>Energy cost per year:</td>
+                  <td class="math">
+                    <input
+                      name="Text7"
+                      type="text"
+                      class="outtext"
+                      style="width: 120px"
+                      readonly="readonly"
+                    />
+                  </td>
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+            </form>
+
+            <script src="../calc2.js"></script>
+            <script>
+              var c = "$";
+              function OnCountryChange() {
+                i = document.calcform.Select1.selectedIndex;
+                clook = [
+                  "$",
+                  "$",
+                  "\u20AC",
+                  "\u20AC",
+                  "R",
+                  "P",
+                  "$",
+                  "\u00A3",
+                  "$",
+                  " ",
+                ];
+                dlook = [0, 0, 0, 0, 2, 3, 0, 1, 0, 4];
+                c = clook[i];
+                document.calcform.Select3.selectedIndex = dlook[i];
+              }
+              function OnSetPower() {
+                look = [
+                  600, 3000, 2400, 1600, 2000, 70, 2000, 800, 100, 50, 200, 200,
+                  70, 1000, 1600, 2000, 4000,
+                ];
+                i = document.calcform.Select4.selectedIndex;
+                if (i == 0) return;
+                document.calcform.Text1.value = look[i - 1];
+                document.calcform.Select2.selectedIndex = 0;
+              }
+              function OnEnergyCalc() {
+                i2 = document.calcform.Select2.selectedIndex;
+                p = document.calcform.Text1.value;
+                h = document.calcform.Text2.value;
+                if (p == "" || h == "") return;
+                if (i2 == 0) p /= 1000;
+                kwh = p * h;
+                kwh = roundnum(kwh, 5);
+                document.calcform.Text8.value = kwh;
+              }
+              function OnCalcCost() {
+                i3 = document.calcform.Select3.selectedIndex;
+                kwh_cost = document.calcform.Text3.value;
+                kwh = document.calcform.Text8.value;
+                if (kwh == "") OnEnergyCalc();
+                kwh = document.calcform.Text8.value;
+                if (i3 > 1) kwh_cost *= 100;
+                day_cost = (kwh * kwh_cost) / 100;
+                month_cost = day_cost * 30;
+                year_cost = day_cost * 365;
+                day_cost = roundnum(day_cost, 5);
+                month_cost = roundnum(month_cost, 5);
+                year_cost = roundnum(year_cost, 5);
+                document.calcform.Text5.value = c + day_cost;
+                document.calcform.Text6.value = c + month_cost;
+                document.calcform.Text7.value = c + year_cost;
+              }
+              function OnReset() {
+                c = "$";
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer of the page -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Aveco</h4>
+            <ul>
+              <li><a href="About_Us.html">Profile</a></li>
+              <li><a href="#">Governance</a></li>
+              <li><a href="#">Disclosures</a></li>
+              <li><a href="#">Investors Relation</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Advocacies</a></li>
+              <li><a href="#">Competative Selection</a></li>
+              <li><a href="#">Process</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Explore Aveco</h4>
+            <ul>
+              <li><a href="index.html">For Homes</a></li>
+              <li><a href="#">For Biz</a></li>
+              <li><a href="#">For Enterprise</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>News & Advisories</h4>
+            <ul>
+              <li><a href="#">Maintenance Schedule</a></li>
+              <li><a href="#">Meter Deposit Refund</a></li>
+              <li><a href="#">Rates Archives</a></li>
+              <li><a href="#">Latest News & Press Releases</a></li>
+              <li><a href="services.html">Safety Tips</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Sign Up Now!</h4>
+            <h4>Contuct Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="container-fluid pt-3 pb-3" id="end">
+      <img
+        src="img/logo2.png"
+        id="logo"
+        class="rounded mx-auto d-block"
+        alt="..."
+      />
+      <p class="text-center pt-3 text-light">
+        2023 All Rights Reserved. Design by @Wenavan
+      </p>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: { state: "close" },
+      });
+    </script>
+  </body>
+</html>

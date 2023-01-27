@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Sofia+Sans+Condensed:wght@200&family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="About_styles.css" type="text/css" />
+
+    <title>Profile</title>
+  </head>
+
+  <body>
+    <!-- Nav bar heading-->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index2.html">AVECO</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="index2.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="About_Us.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Applying for a new connection</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Monthly Rate Schedule</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Generation Rates</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Payement Centers</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Estimating your Bill</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="services.html"
+                      >Electrical Safety Tips</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News and Updates</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Company Profile-->
+    <div>
+      <div class="container" id="profile">
+        <h1>COMPANY PROFILE</h1>
+        <div class="row">
+          <img src="lineman.jpg" />
+          <p>AVECO AND POWER COMPANY</p>
+
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/v1BMWczn7JM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            Aveco Electric Company is the third largest privately-owned electric
+            distribution utility in the country in terms of customer size and
+            annual kWh sales.
+          </p>
+          <p>
+            Aveco’s franchise area covers Davao City, areas of Panabo City, and
+            the municipalities of Carmen, Dujali, and Santo Tomas in Davao del
+            Norte, with a population of approximately 1.8 mn and a total area of
+            3,561 sq. kms.
+          </p>
+          <p>
+            As of December 2019, Aveco served a total of 420,666 customers, with
+            a recorded peak demand of 454 MW.
+          </p>
+          <p>
+            The growth in demand resulted in total sales of 2,633,920 MWh as of
+            December 2019. Davao Light recorded a total growth in energy sales
+            for 2019 of 6.71% and increase of demand of 7.73%.
+          </p>
+          <p>
+            Aveco’s distribution systems loss at 4.28% remains below the
+            government-mandated cap of 6.25%. Systems loss below the mandated
+            caps translates to reduced power costs, resulting in customer
+            savings.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission and Vission-->
+    <div>
+      <div class="container-fluid" id="bg">
+        <div class="row">
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <div class="w-100 d-none d-md-block"></div>
+
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6" id="right">
+            <h4 id="top">MISSION</h4>
+          </div>
+
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <div class="w-100 d-none d-md-block"></div>
+
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6" id="right">
+            <p id="content">
+              To deliver quality electric services consistent with our core
+              values, taking advantage of the latest technologies of the
+              resources for member-consumer-owner satisfaction.
+            </p>
+          </div>
+
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <div class="w-100 d-none d-md-block"></div>
+
+          <div class="col-lg-6" id="left">
+            <h4>VISSION</h4>
+          </div>
+
+          <div class="col-lg-6"></div>
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+
+          <div class="w-100 d-none d-md-block"></div>
+
+          <div class="col-lg-6" id="left">
+            <p id="content" class="buttom">
+              The premier electric power provider improving the lives of every
+              Boholano
+            </p>
+          </div>
+
+          <div class="col-lg-6"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

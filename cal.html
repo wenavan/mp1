@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Modal Login Form</title>
+    <link rel="stylesheet" href="loginstyles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <button id="login-show">Login</button>
+
+    <div id="login-modal">
+      <div class="modal">
+        <div class="top-form">
+          <div class="close-modal">&#10006;</div>
+        </div>
+        <div class="login-form">
+          <h2>Login With Email</h2>
+          <form action="#">
+            <input class="form-control" type="text" placeholder="Email" />
+            <input
+              class="form-control"
+              type="password"
+              placeholder="Password"
+            />
+            <button type="button" class="submit-btn">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function () {
+        $("#login-show").click(function () {
+          $("#login-modal").fadeIn().css("display", "flex");
+        });
+
+        $(".close-modal").click(function () {
+          $("#login-modal").fadeOut();
+        });
+      });
+    </script>
+  </body>
+</html>

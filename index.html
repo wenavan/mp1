@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/dc2922df3c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+
+    <title>Home</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <!-- Nav bar heading-->
+
+    <div class="header">
+      <a href="#" class="iconhead" id="iconhead"
+        ><i class="fa-brands fa-facebook-f"></i
+      ></a>
+      <a href="#" class="iconhead"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="img/logo2.png" id="logo"
+        /></a>
+        <h1 class="logo" style="color: white">AVECO</h1>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <form id="app" action="#">
+              <label :data-state="state" for="search">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  @click="state = 'opan'"
+                  @blur="state='close'"
+                />
+                <i class="fa fa-search" @click="" aria-hidden="true"></i>
+              </label>
+            </form>
+            <div id="bcl">
+              <a
+                style="font-size: 8pt; text-decoration: none"
+                href="http://www.devanswer.com"
+              ></a>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="About_Us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Applying for a new connection</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Monthly Rate Schedule</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Generation Rates</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Payement Centers</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Bill_calculator.html"
+                    >Estimating your Bill</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="services.html"
+                    >Electrical Safety Tips</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact_Us.html">Contact Us</a>
+            </li>
+            <li class="nav-item pt-2 ps-2">
+              <a href="#"
+                ><i class="fa-solid fa-user-plus" style="color: white"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel slide images -->
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3500"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/slide_1.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="carosel">Advancing Businesses</h1>
+            <p>
+              Aveco ensures to provide reliable and clean power at a reasonable
+              price to its customers encouraging growth and development in the
+              areas where it serves. Today, Davao Light is among the biggest
+              investors in its franchise.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide_2.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="carosel">Advancing Communities</h1>
+            <p>
+              Aveco affirms that the ultimate measure of success is the
+              satisfaction of its customers. One of the company's best practices
+              which is nearing world-class standards is the capability to
+              connect a new customer's meter the same day he signs his service
+              contract for electricity service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card slides of Services-->
+
+    <div class="container" id="card">
+      <div class="row text-center">
+        <div class="col-lg-3 d-flex justify-content-center">
+          <div class="card border-0" style="width: 18rem">
+            <div class="inner">
+              <img
+                src="img/card1.png"
+                class="card-img-top img-fliud"
+                alt="..."
+              />
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">WANT TO APPLYING FOR A NEW CONNECTION?</a>
+              </h5>
+              <p class="card-text">
+                Here's how to apply for a new electric service connection.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 d-flex justify-content-center">
+          <div class="card border-0" style="width: 18rem">
+            <div class="inner">
+              <img
+                src="img/card2.png"
+                class="card-img-top img-fliud"
+                alt="..."
+              />
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title"><a href="#">CALL US!</a></h5>
+              <p class="card-text">
+                Contact us anytime 24/7 at <strong>229-3572</strong> or
+                <strong>655-3572</strong> for Davao del Norte customers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 d-flex justify-content-center">
+          <div class="card border-0" style="width: 18rem">
+            <div class="inner">
+              <img
+                src="img/card3.png"
+                class="card-img-top img-fliud"
+                alt="..."
+              />
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title"><a href="#">PAY ANYTIME, ANYWHERE!</a></h5>
+              <p class="card-text">
+                Here is a list of payment options that you can choose from in
+                paying your electricity bill.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 d-flex justify-content-center">
+          <div class="card border-0" style="width: 18rem">
+            <div class="inner">
+              <img
+                src="img/card4.png"
+                class="card-img-top img-fliud"
+                alt="..."
+              />
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">SCHEDULED POWER INTERRUPTIONS</a>
+              </h5>
+              <p class="card-text">
+                Find out if there's a scheduled power interruption in your area.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="container pt-5 pb-5" id="ask">
+      <h1 class="mt-3">Frequently Asked Questions</h1>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+            >
+              Power Service Application Process
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              1. Take the electronic Pre-Membership Education Seminar
+              Exam(e-PMES)<br />2. Go to AVECO Main Office in Tubigon, Bohol,
+              and submit the required documents<br />3. House Wiring
+              Inspection<br />4. Evaluation and Clearance<br />5. Payment
+              (Over-the-Counter in AVECO Main Office)<br />6. Signing of the
+              Memorandum of Agreement (MOA) or "Kasunduan" and issuance of
+              membership ID<br />7. Processing of Connection Order<br />8.
+              Installation of Meter
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+            >
+              Operating Hours
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Monday - Friday<br />8:00 AM - 5:00 PM<br />Closed on Holidays
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+            >
+              Area Offices
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Main Office – Cabulijan, Tubigon, Bohol<br />Sub-Office – Tabaco
+              St., Cogon, Tagbilaran City
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saving energy slogan-->
+    <div class="container-fluid" id="slogan">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1 id="white">For your better tomorrow, save energy today!</h1>
+          <p id="white">
+            Once in control of energy usage, you can be in a better position to
+            manage your monthly bill.
+          </p>
+        </div>
+        <div class="col-lg-3 pt-5">
+          <button type="button">Click here</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer of the page -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Aveco</h4>
+            <ul>
+              <li><a href="About_Us.html">Profile</a></li>
+              <li><a href="#">Governance</a></li>
+              <li><a href="#">Disclosures</a></li>
+              <li><a href="#">Investors Relation</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Advocacies</a></li>
+              <li><a href="#">Competative Selection</a></li>
+              <li><a href="#">Process</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Explore Aveco</h4>
+            <ul>
+              <li><a href="index.html">For Homes</a></li>
+              <li><a href="#">For Biz</a></li>
+              <li><a href="#">For Enterprise</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>News & Advisories</h4>
+            <ul>
+              <li><a href="#">Maintenance Schedule</a></li>
+              <li><a href="#">Meter Deposit Refund</a></li>
+              <li><a href="#">Rates Archives</a></li>
+              <li><a href="#">Latest News & Press Releases</a></li>
+              <li><a href="services.html">Safety Tips</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Sign Up Now!</h4>
+            <h4>Contuct Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="container-fluid pt-3 pb-3" id="end">
+      <img
+        src="img/logo2.png"
+        id="logo"
+        class="rounded mx-auto d-block"
+        alt="..."
+      />
+      <p class="text-center pt-3 text-light">
+        2023 All Rights Reserved. Design by @Wenavan
+      </p>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: { state: "close" },
+      });
+    </script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("bar");
+        if (x.className === "container") {
+          x.className += " responsive";
+        } else {
+          x.className = "container";
+        }
+      }
+    </script>
+  </body>
+</html>
